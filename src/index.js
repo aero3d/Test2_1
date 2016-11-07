@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/task2a', (req, res) => {
-  const sum = (+req.query.a) || 0 + (+req.query.b || 0);
+  const sum = (+req.query.a || 0) + (+req.query.b || 0);
 res.send(sum.toString());
 });
 
